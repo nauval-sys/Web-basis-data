@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atribut, Entitas, dan Relasi dalam ERD</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .content {
+      max-width: 900px;
+      margin: 120px auto;
+      padding: 20px;
+      color: white;
+      line-height: 1.8;
+      font-size: 1.6rem;
+    }
+    .content h1 {
+      text-align: center;
+      color: #b74b4b;
+      margin-bottom: 20px;
+    }
+    .content h2 {
+      color: #e4e4ff;
+      margin-top: 30px;
+    }
+    pre {
+      background: rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #b74b4b;
+      overflow-x: auto;
+      font-size: 1.4rem;
+    }
+  </style>
+</head>
+<body class="harapan-page">
+
+  <!-- Navbar sama dengan halaman lain -->
+  <header>
+      <a href="index.html" class="logo">UBP</a>
+      <nav>
+          <a href="index.html">Home</a>
+          <a href="profile.html">Profile</a>
+          <a href="https://ubpkarawang.ac.id/" target="_blank">Ubp Karawang</a>
+      </nav>
+  </header>
+
+  <div class="content">
+    <h1>Atribut, Entitas, dan Relasi dalam ERD</h1>
+
+    <h2>1. Entitas</h2>
+    <p>
+      Entitas adalah objek nyata atau konsep yang datanya ingin disimpan di database.
+      Contoh: <b>Mahasiswa</b>, <b>Dosen</b>, <b>Mata Kuliah</b>.
+      Dalam ERD, entitas digambarkan sebagai <i>persegi panjang</i>.
+    </p>
+
+    <h2>2. Atribut</h2>
+    <p>
+      Atribut adalah ciri atau karakteristik dari entitas.
+      Contoh: Mahasiswa memiliki atribut <b>NIM, Nama, Alamat</b>.
+      Dalam ERD, atribut digambarkan sebagai <i>oval</i> yang terhubung ke entitas.
+      <br><br>
+      - <b>Primary Key (PK)</b>: atribut unik untuk membedakan data (contoh: NIM). <br>
+      - <b>Foreign Key (FK)</b>: atribut yang menghubungkan antar entitas.
+    </p>
+
+    <h2>3. Relasi</h2>
+    <p>
+      Relasi adalah hubungan antar entitas.
+      Contoh: Mahasiswa <b>mengambil</b> Mata Kuliah.
+      Dalam ERD, relasi digambarkan sebagai <i>belah ketupat (diamond)</i>.
+      <br><br>
+      - One to One (1:1) <br>
+      - One to Many (1:N) <br>
+      - Many to Many (M:N)
+    </p>
+
+    <h2>4. Contoh ERD Sederhana</h2>
+    <pre>
+Mahasiswa (NIM, Nama, Alamat)
+   |
+   |--- Mengambil
+   |
+Mata Kuliah (KodeMK, NamaMK, SKS)
+    </pre>
+  </div>
+
+</body>
+</html>
