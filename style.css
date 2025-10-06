@@ -17,7 +17,7 @@ html{
 body{
   margin: 0;
   min-height: 100vh;
-  background-color: #000;          /* area dalam bingkai hitam */
+  background-color: #000;         
   color: white;
   box-sizing: border-box;
 }
@@ -29,12 +29,14 @@ header{
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background-color: transparent;
+    background-color: #6b6b6b;    
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+
+    border-bottom: 2px solid #b74b4b; 
 }
 
 .logo{
@@ -56,11 +58,12 @@ nav a{
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
+    
 }
 
 nav a:hover,
 nav a.active{
-    color: #b74b4b;
+    color: #000000;
     border-bottom: 3px solid #b74b4b;
 }
 
@@ -71,8 +74,8 @@ nav a.active{
         top: 0;
         right: 0;
         width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
+        border-left: 3px solid #f11010;
+        border-bottom: 3px solid #e90a0a;
         
         padding: 1rem solid;
         background-color: #161616;
@@ -233,13 +236,13 @@ span{
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* lebih lebar */
-  gap: 40px;                  /* jarak antar kotak diperbesar */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+  gap: 40px;                  
   justify-items: center;      
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 0;            /* jarak atas-bawah lebih lega */
+  padding: 60px 0;           
 }
 
 .card-basis {
@@ -247,7 +250,7 @@ span{
   color: #fff;
   padding: 20px;
   border-radius: 20px;
-  width: 260px;               /* kotak sedikit lebih besar */
+  width: 260px;              
   min-height: 220px;
   text-align: center;
   box-shadow: 0 6px 18px rgba(0,0,0,0.5);
@@ -261,46 +264,48 @@ span{
 
 .card-basis img {
   width: 100%;
-  height: 160px;              /* gambar lebih besar */
+  height: 160px;             
   object-fit: cover;
   border-radius: 12px;
-  margin-bottom: 15px;        /* jarak ke teks */
+  margin-bottom: 15px;        
 }
 
 .card-basis h2 {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.4;
-  color: #e4e4ff;             /* warna teks lebih kontras */
+  color: #e4e4ff;             
 }
 
 
 .harapan-page {
-  background: #1a1a1a;                 /* seluruh layar warna gelap */
+ background: #1a1a1a;         
   color: white;
   margin: 0;
-  height: 100vh;                        /* tinggi penuh layar */
-  display: flex;                        /* untuk center vertikal & horizontal */
+  min-height: 100vh;           
+  padding: 100px 20px 60px;    
+  display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;     
   font-family: Arial, sans-serif;
+  overflow-y: auto;    
 }
 
 .harapan-container {
-  max-width: 800px;                      /* agar teks tidak terlalu melebar */
-  width: 80%;                             /* isi sebagian besar layar */
-  text-align: center;                     /* teks rata tengah */
-  font-size: 2.5rem;                       /* teks sedikit lebih besar */
+  max-width: 800px;                     
+  width: 80%;                             
+  text-align: center;                     
+  font-size: 2.5rem;                       
   line-height: 1.8;    
-  text-align: justify;                    /* jarak antarbaris */
+  text-align: justify;                    
 }
 
 .harapan-image {
-  width: 200px;             /* atur ukuran lebar gambar */
-  max-width: 100%;          /* agar tidak melebihi layar */
-  display: block;           /* supaya bisa di-center dengan margin */
-  margin: 0 auto 20px;      /* center gambar & beri jarak bawah */
-  border-radius: 10px;      /* opsional: sudut gambar membulat */
+  width: 200px;             
+  max-width: 100%;          
+  display: block;          
+  margin: 0 auto 20px;      
+  border-radius: 10px;      
 }
 
 
