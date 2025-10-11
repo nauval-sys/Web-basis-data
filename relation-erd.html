@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relation pada ERD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="harapan-page">
+
+  <div class="harapan-container">
+    <h1 style="text-align:center; color:#b74b4b;">Relation pada ERD</h1>
+
+    <h2>1. Pengertian Relation</h2>
+    <p><b>Relation</b> adalah hubungan antar entitas dalam ERD yang menunjukkan interaksi antara dua tabel atau lebih.</p>
+
+    <ul>
+      <li><b>One to One (1–1):</b> satu entitas hanya berhubungan dengan satu entitas lain. (Contoh: Karyawan ↔ KTP)</li>
+      <li><b>One to Many (1–N):</b> satu entitas berhubungan dengan banyak entitas lain. (Contoh: Dosen ↔ Mahasiswa)</li>
+      <li><b>Many to Many (M–N):</b> banyak entitas berhubungan dengan banyak entitas lain. (Contoh: Mahasiswa ↔ MataKuliah)</li>
+    </ul>
+
+    <h2>2. Mengapa Many-to-Many Tidak Baik Digunakan</h2>
+    <p>Relasi <b>Many-to-Many</b> tidak disarankan karena sulit diimplementasikan langsung dalam database relasional. 
+    Solusinya adalah membuat tabel penghubung (tabel relasi) untuk memecahnya menjadi dua relasi <b>One-to-Many</b>.</p>
+
+    <p><b>Contoh:</b></p>
+    <p>Relasi Mahasiswa ↔ MataKuliah (M–N) dipecah menjadi:</p>
+    <ul>
+      <li>Mahasiswa —(1:N)— KRS</li>
+      <li>MataKuliah —(1:N)— KRS</li>
+    </ul>
+
+    <p style="text-align:center; margin-top: 40px;">
+      <a href="index.html" class="btn">← Kembali ke Home</a>
+    </p>
+  </div>
+
+</body>
+</html>

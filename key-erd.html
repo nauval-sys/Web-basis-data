@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primary Key, Foreign Key, dan Candidate Key</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="harapan-page">
+
+  <div class="harapan-container">
+    <h1 style="text-align:center; color:#b74b4b;">Primary Key, Foreign Key, dan Candidate Key</h1>
+
+    <h2>1. Primary Key</h2>
+    <p><b>Primary Key</b> adalah atribut unik yang digunakan untuk mengidentifikasi setiap record dalam tabel. 
+    Nilainya tidak boleh duplikat dan tidak boleh bernilai <i>NULL</i>.</p>
+
+    <p><b>Contoh ERD:</b></p>
+    <ul>
+      <li>Mahasiswa(NIM, Nama, Alamat) → Primary Key: <b>NIM</b></li>
+      <li>Dosen(NIDN, Nama, Prodi) → Primary Key: <b>NIDN</b></li>
+      <li>MataKuliah(Kode_MK, Nama_MK, SKS) → Primary Key: <b>Kode_MK</b></li>
+      <li>Barang(Kode_Barang, Nama_Barang, Harga) → Primary Key: <b>Kode_Barang</b></li>
+    </ul>
+
+    <h2>2. Foreign Key</h2>
+    <p><b>Foreign Key</b> adalah atribut yang menjadi penghubung antar tabel. 
+    Kolom ini mengambil nilai dari <b>Primary Key</b> tabel lain.</p>
+
+    <p><b>Contoh ERD:</b></p>
+    <ul>
+      <li>KRS(NIM, Kode_MK) → Foreign Key: <b>NIM</b> dari Mahasiswa</li>
+      <li>KRS(NIM, Kode_MK) → Foreign Key: <b>Kode_MK</b> dari MataKuliah</li>
+      <li>Transaksi(Kode_Barang, ID_Pegawai) → Foreign Key: <b>Kode_Barang</b> dari Barang</li>
+      <li>Gaji(ID_Pegawai) → Foreign Key: <b>ID_Pegawai</b> dari Pegawai</li>
+    </ul>
+
+    <h2>3. Candidate Key</h2>
+    <p><b>Candidate Key</b> adalah semua atribut yang bisa dijadikan <b>Primary Key</b> karena bersifat unik 
+    dan tidak boleh bernilai <i>NULL</i>.</p>
+
+    <p><b>Contoh ERD:</b></p>
+    <ul>
+      <li>Mahasiswa(NIM, Email) → Candidate Key: NIM, Email</li>
+      <li>Pegawai(ID_Pegawai, No_KTP) → Candidate Key: ID_Pegawai, No_KTP</li>
+      <li>Customer(ID_Customer, No_Telp) → Candidate Key: ID_Customer, No_Telp</li>
+      <li>Buku(ISBN, Kode_Buku) → Candidate Key: ISBN, Kode_Buku</li>
+    </ul>
+
+    <h2 style="margin-top: 100px;">Berikut 5 contoh penerapan ERD</h2>
+
+    <h3>contoh 1 Di kampus</h3>
+      <img src="gambar/Kampus.png" alt="ERD Kampus" width="700">
+
+    <h3>contoh 2 Toko online</h3>
+      <img src="gambar/Toko online.png" alt="ERD Kampus" width="700">
+    <h3>contoh 3 Sekolah</h3>
+      <img src="gambar/Sekolah.png" alt="ERD Kampus" width="700">
+    <h3>contoh 4 Perusahaan</h3>
+      <img src="gambar/Perusahaan.png" alt="ERD Kampus" width="700">
+    <h3>contoh 5 Rumah Sakit</h3>
+      <img src="gambar/Rumah Sakit.png" alt="ERD Kampus" width="700">
+
+    <p style="text-align:center; margin-top: 40px;">
+      <a href="index.html" class="btn">← Kembali ke Home</a>
+    </p>
+  </div>
+
+</body>
+</html>
