@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normalisasi pada ERD</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .content {
+      max-width: 900px;
+      margin: 130px auto;
+      padding: 25px;
+      color: white;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+    h1, h2, h3 {
+      color: #b74b4b;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    ul {
+      margin-left: 25px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #b74b4b;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: rgba(183, 75, 75, 0.3);
+    }
+  </style>
+</head>
+<body class="harapan-page">
+
+  <!-- Navbar -->
+  <header>
+    <a href="index.html" class="logo">UBP</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="https://ubpkarawang.ac.id/" target="_blank">Ubp Karawang</a>
+    </nav>
+  </header>
+
+  <!-- Konten -->
+  <div class="content">
+    <h1>Normalisasi pada ERD</h1>
+
+    <p><b>Normalisasi</b> adalah proses menyusun data di dalam database agar tidak ada duplikasi data
+      (redundansi) dan menjaga hubungan antar tabel tetap efisien serta konsisten.</p>
+
+    <h3>Tujuan Normalisasi:</h3>
+    <ul>
+      <li>Mengurangi data ganda</li>
+      <li>Menjaga integritas data</li>
+      <li>Meningkatkan efisiensi penyimpanan</li>
+      <li>Menghindari anomali data</li>
+    </ul>
+
+    <h3>Bentuk-Bentuk Normalisasi:</h3>
+    <ul>
+      <li><b>1NF</b> - Setiap kolom hanya berisi satu nilai tunggal.</li>
+      <li><b>2NF</b> - Semua kolom non-key bergantung penuh pada Primary Key.</li>
+      <li><b>3NF</b> - Tidak ada ketergantungan antar kolom non-key.</li>
+      <li><b>BCNF</b> - Versi lebih ketat dari 3NF, semua kolom bergantung hanya pada super key.</li>
+    </ul>
+
+    <h3>Contoh Kasus:</h3>
+    <p><b>Sebelum Normalisasi:</b></p>
+    <table>
+      <tr>
+        <th>NIM</th><th>Nama</th><th>Mata Kuliah</th><th>Dosen</th><th>Nilai</th>
+      </tr>
+      <tr>
+        <td>101</td><td>Sinta</td><td>Basis Data</td><td>Pak Rudi</td><td>A</td>
+      </tr>
+      <tr>
+        <td>101</td><td>Sinta</td><td>Pemrograman</td><td>Pak Budi</td><td>B</td>
+      </tr>
+    </table>
+
+    <p><b>Setelah Normalisasi:</b></p>
+    <ul>
+      <li>Tabel <b>Mahasiswa</b> → NIM, Nama</li>
+      <li>Tabel <b>MataKuliah</b> → KodeMK, NamaMK, Dosen</li>
+      <li>Tabel <b>Nilai</b> → NIM, KodeMK, Nilai</li>
+    </ul>
+
+    <p>Dengan begitu, struktur data menjadi lebih efisien dan mudah dikelola tanpa duplikasi.</p>
+  </div>
+
+</body>
+</html>
